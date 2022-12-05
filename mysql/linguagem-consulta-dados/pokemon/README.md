@@ -153,7 +153,11 @@ WHERE `peso_kg` >= 100 AND `peso_kg` <= 500;
 14. Crie um ranking dos top 10 pokémons mais velozes, contendo `numero`, `nome` e `velocidade`.
 
 ```sql
+USE pokedex; 
 
+SELECT `numero`, `nome`, `velocidade` FROM `Pokemon`
+ORDER BY `velocidade` DESC
+LIMIT 10;
 ``` 
 
 

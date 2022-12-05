@@ -201,7 +201,11 @@ LIMIT 1;
 19. Selecione o `numero`, `nome`, `defesa`, `ataque` dos pokémons com defesa > 60 e ataque <= 70; ordenados decrescente pelo `total`. 
 
 ```sql
+USE pokedex; 
 
+SELECT `numero`, `nome`, `defesa`, `ataque`, `total` FROM `Pokemon`
+WHERE `defesa` > 60 AND `ataque` <= 70
+ORDER BY `total` DESC;
 ```
 
 20. Selecione todos os pokémons do tipo `Planta` e `Venenoso` que não sejam `Green`, ordenado crescente pelo `nome`.

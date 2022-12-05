@@ -164,7 +164,11 @@ LIMIT 10;
 15. Selecione `numero`, `nome`, `tipo1`, `tipo2`, `taxa_captura` dos pokémons que possuem os dois tipos e tenham uma taxa de captura acima de 100. Ordene os resultados decrescente pela taxa de captura.
 
 ```sql
+USE pokedex; 
 
+SELECT `numero`, `nome`, `tipo1`, `tipo2`, `taxa_captura` FROM `Pokemon`
+WHERE `taxa_captura` >= 100 
+ORDER BY `taxa_captura` DESC;
 ```
 
 16. Quais são os tipos primários dos pokémons?

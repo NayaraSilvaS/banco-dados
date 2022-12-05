@@ -105,6 +105,10 @@ LIMIT 1;
 8. Selecione o `numero`, `nome` e `tipo1`; de todos os pokémons cujo tipo primário é `Fire`.
 
 ```sql
+USE pokedex; 
+
+SELECT `numero`, `nome`, `tipo1` FROM `Pokemon`
+WHERE `tipo1` = 'Fire';
 
 ```
 

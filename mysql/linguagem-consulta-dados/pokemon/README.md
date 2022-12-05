@@ -126,7 +126,11 @@ ORDER BY `defesa` DESC;
 11. Qual o pokémon possui *menor* taxa de captura? Selecione apenas `numero` e `nome`.
 
 ```sql
+USE pokedex; 
 
+SELECT `numero`, `nome` FROM `Pokemon`
+ORDER BY `taxa_captura` ASC
+LIMIT 1;
 ```
 
 

@@ -174,7 +174,9 @@ ORDER BY `taxa_captura` DESC;
 16. Quais são os tipos primários dos pokémons?
 
 ```sql
+USE pokedex; 
 
+SELECT DISTINCT `tipo1` FROM `Pokemon`;
 ```
 
 17. Selecione o `numero`, `nome` e `cor`; de todos os pokémons que o nome começa com a letra `D`.

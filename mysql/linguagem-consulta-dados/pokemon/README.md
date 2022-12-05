@@ -69,8 +69,7 @@ Para este projeto, sua tarefa é criar consultas (queries), usando as técnicas 
 ```sql
 USE pokedex; 
 
-SELECT * from `Pokemon`
-WHERE `numero` AND `nome` AND `cor` AND `altura_m` AND `peso_kg`;
+SELECT `numero`, `nome`, `cor`, `altura_m`, `peso_kg` FROM `Pokemon`;
 
 ```
 

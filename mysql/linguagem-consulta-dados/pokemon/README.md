@@ -115,6 +115,10 @@ WHERE `tipo1` = 'Fire';
 10. Selecione em ordem decrescente o `numero`, `nome` e `defesa` de todos os pokémons.
 
 ```sql
+USE pokedex; 
+
+SELECT `numero`, `nome`, `defesa` FROM `Pokemon`
+ORDER BY `defesa` DESC;
 
 ```
 

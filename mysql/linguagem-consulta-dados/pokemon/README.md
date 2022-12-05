@@ -94,7 +94,11 @@ WHERE `cor` = 'amarelo'AND `geracao` = 1;
 7. Qual é o pokémon mais forte?
 
 ```sql
+USE pokedex; 
 
+SELECT `numero`, `nome`, `total` FROM `Pokemon`
+ORDER BY `total` DESC
+LIMIT 1;
 ```
 
 

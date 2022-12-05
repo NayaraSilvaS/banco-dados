@@ -85,7 +85,10 @@ WHERE `geracao` = 1;
 6. Quais são os pokémons `Amarelo` da primeira geração?
 
 ```sql
+USE pokedex; 
 
+SELECT `cor`, `geracao` FROM `Pokemon`
+WHERE `cor` = 'amarelo'AND `geracao` = 1;
 ```
 
 7. Qual é o pokémon mais forte?

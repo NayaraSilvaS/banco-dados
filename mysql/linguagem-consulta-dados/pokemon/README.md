@@ -191,7 +191,11 @@ WHERE `nome` LIKE 'd%';
 18. Qual é o pokémon mais poderoso de todas as gerações?
 
 ```sql
+USE pokedex; 
 
+SELECT `numero`, `nome`, `total` FROM `Pokemon`
+ORDER BY `total` DESC
+LIMIT 1;
 ```
 
 19. Selecione o `numero`, `nome`, `defesa`, `ataque` dos pokémons com defesa > 60 e ataque <= 70; ordenados decrescente pelo `total`. 

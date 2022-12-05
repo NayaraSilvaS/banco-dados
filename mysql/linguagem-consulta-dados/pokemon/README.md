@@ -77,7 +77,10 @@ WHERE `numero` AND `nome` AND `cor` AND `altura_m` AND `peso_kg`;
 5. Qual é o `numero` e o `nome` de todos os pokémons da primeira geração?
 
 ```sql
+USE pokedex; 
 
+SELECT `numero`, `nome` FROM `Pokemon`
+WHERE `geracao` = 1;
 ```
 
 6. Quais são os pokémons `Amarelo` da primeira geração?

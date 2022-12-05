@@ -182,7 +182,10 @@ SELECT DISTINCT `tipo1` FROM `Pokemon`;
 17. Selecione o `numero`, `nome` e `cor`; de todos os pokémons que o nome começa com a letra `D`.
 
 ```sql
+USE pokedex; 
 
+SELECT `numero`, `nome`, `cor` FROM `Pokemon`
+WHERE `nome` LIKE 'd%';
 ```
 
 18. Qual é o pokémon mais poderoso de todas as gerações?

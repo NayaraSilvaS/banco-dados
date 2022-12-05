@@ -67,6 +67,10 @@ Para este projeto, sua tarefa é criar consultas (queries), usando as técnicas 
 4. Selecione o `numero`, `nome`, `cor`, `altura_m` e `peso_kg` de todos os pokémons cadastrados.
 
 ```sql
+USE pokedex; 
+
+SELECT * from `Pokemon`
+WHERE `numero` AND `nome` AND `cor` AND `altura_m` AND `peso_kg`;
 
 ```
 

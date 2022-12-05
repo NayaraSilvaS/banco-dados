@@ -70,7 +70,6 @@ Para este projeto, sua tarefa é criar consultas (queries), usando as técnicas 
 USE pokedex; 
 
 SELECT `numero`, `nome`, `cor`, `altura_m`, `peso_kg` FROM `Pokemon`;
-
 ```
 
 5. Qual é o `numero` e o `nome` de todos os pokémons da primeira geração?
@@ -109,7 +108,6 @@ USE pokedex;
 
 SELECT `numero`, `nome`, `tipo1` FROM `Pokemon`
 WHERE `tipo1` = 'Fire';
-
 ```
 
 10. Selecione em ordem decrescente o `numero`, `nome` e `defesa` de todos os pokémons.
@@ -119,7 +117,6 @@ USE pokedex;
 
 SELECT `numero`, `nome`, `defesa` FROM `Pokemon`
 ORDER BY `defesa` DESC;
-
 ```
 
 
@@ -146,7 +143,10 @@ WHERE `tipo2` IS NULL;
 13. Selecione `numero`, `nome`, `tipo1`, `tipo2` de todos os pokémons que possuem o peso entre 100kg e 500kg.
 
 ```sql
+USE pokedex; 
 
+SELECT `numero`, `nome`, `tipo1`, `tipo2`, `peso_kg` FROM `Pokemon`
+WHERE `peso_kg` >= 100 AND `peso_kg` <= 500;
 ```
 
 

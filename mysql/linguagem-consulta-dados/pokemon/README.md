@@ -137,7 +137,10 @@ LIMIT 1;
 12. Selecione todos pokémons que não possuem tipo secundário, ou seja, `tipo2`.
 
 ```sql
+USE pokedex; 
 
+SELECT * FROM `Pokemon`
+WHERE `tipo2` IS NULL;
 ```
 
 13. Selecione `numero`, `nome`, `tipo1`, `tipo2` de todos os pokémons que possuem o peso entre 100kg e 500kg.

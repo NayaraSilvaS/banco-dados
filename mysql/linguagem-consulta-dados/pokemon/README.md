@@ -217,10 +217,10 @@ ORDER BY `total` DESC;
 21. Selecione de maneira crescente os nomes dos pokémons que possuem a letra y na 4ª posição do nome.
 
 ```sql
-USE pokedex;        
-                    
-SELECT `numero`, `no
-WHERE `nome` LIKE '
+USE pokedex; 
+
+SELECT `numero`, `nome`, `cor` FROM `Pokemon`
+WHERE `nome` LIKE '___y%'
 ORDER BY `nome` ASC;
 ```
 

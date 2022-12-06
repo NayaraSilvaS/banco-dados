@@ -300,7 +300,11 @@ ORDER BY `total` DESC;
 Ordene os resultados crescente por `taxa_captura` e decrescente pelo `total`.
 
 ```sql
+USE pokedex; 
 
+SELECT `nome`, `tipo1`, `total`, `taxa_captura` FROM `Pokemon`
+WHERE `tipo1` LIKE 'd%' AND `tipo2` IS NULL
+ORDER BY `taxa_captura` ASC, `total` DESC;
 ```
 
 30. Qual é o ranking dos top 5 pokémons lendários com maior `taxa_captura` e `total`? Apresente apenas `numero, nome, total, taxa_captura` nos resultados.

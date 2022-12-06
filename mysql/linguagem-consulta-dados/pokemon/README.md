@@ -237,7 +237,10 @@ LIMIT 1;
 23. Selecione o `numero`, `nome` e `altura_m` dos pokémons que possuem altura acima de 2,10m.
 
 ```sql
+USE pokedex; 
 
+SELECT `numero`, `nome`, `altura_m` FROM `Pokemon`
+WHERE `altura_m` > '2,10';
 ```
 
 24. Quais são as diferentes tipos de cores dos pokémons? Apresente os resultados de maneira crescente pelo nome da cor.

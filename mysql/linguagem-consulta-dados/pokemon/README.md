@@ -460,8 +460,9 @@ FROM `Pokemon`;
 2. Quantas cores diferentes possuem os pokémons?
 
 ```sql
+USE pokedex; 
 
-
+SELECT COUNT(DISTINCT `cor`) FROM `Pokemon`;
 ```
 
 3. Qual é o peso médio dos pokémons?

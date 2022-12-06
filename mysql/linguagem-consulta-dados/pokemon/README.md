@@ -339,17 +339,17 @@ WHERE `tipo1` = 'normal' AND `tipo2` IS NULL OR `lendario` IS NULL;
 33. Quem são os pokémons do tipo `Water` que não são azuis? Apresente `numero`, `nome`, `tipo1`, `tipo2` e `cor`, ordenados pelo `nome` de maneira crescente.
 
 ```sql
-USE pokedex; 
 
-SELECT `numero`, `nome`, `velocidade` FROM `Pokemon`
-ORDER BY `velocidade` ASC
-LIMIT 10;
 ```
 
 34. Crie um ranking dos top 10 pokémons mais lentos.
 
 ```sql
+USE pokedex; 
 
+SELECT `numero`, `nome`, `velocidade` FROM `Pokemon`
+ORDER BY `velocidade` ASC
+LIMIT 10;
 ```
 
 35. Selecione os pokémons cujo nome comece e termine com a letra `a`. 

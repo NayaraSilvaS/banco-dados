@@ -286,7 +286,14 @@ WHERE `taxa_captura` = 255;
 28. Quem é o mais poderoso? selecione o `Pikachu`, `Squirtle`, `Bulbasaur` e `Charmander`; ordenados decrescente pelo `total`. 
 
 ```sql
+USE pokedex; 
 
+SELECT `nome`, `total` FROM `Pokemon`
+WHERE `nome` = 'Pikachu' 
+	OR `nome` = 'Bulbasaur' 
+	OR `nome` = 'Squirtle'
+	OR `nome` = 'Charmander'
+ORDER BY `total` DESC;
 ```
 
 29. Quem são os pokémons da primeira geração, que começam com a letra `d` e não possuem tipo secundário?

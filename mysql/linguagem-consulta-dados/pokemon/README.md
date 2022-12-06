@@ -442,8 +442,9 @@ WHERE `hp` >= 100 AND `ataque` >= 100 AND `defesa` >= 100;
 5. Quantos pokémons estão cadastrados no banco de dados?
 
 ```sql
+USE pokedex; 
 
-
+SELECT DISTINCT COUNT(`nome`) FROM `Pokemon`;
 ```
 
 6. Qual é o altura média dos pokémons?

@@ -310,7 +310,12 @@ ORDER BY `taxa_captura` ASC, `total` DESC;
 30. Qual é o ranking dos top 5 pokémons lendários com maior `taxa_captura` e `total`? Apresente apenas `numero, nome, total, taxa_captura` nos resultados.
 
 ```sql
+USE pokedex; 
 
+SELECT `numero`, `nome`, `lendario`,  `taxa_captura`, `total` FROM `Pokemon`
+WHERE `lendario` AND `taxa_captura` AND `total`
+ORDER BY `taxa_captura`DESC, `total` DESC
+LIMIT 5;
 ```
 
 31. Selecione o `numero`, `nome`, `peso_kg` dos pokémons com peso entre 2kg e 3kgs?

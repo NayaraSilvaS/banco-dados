@@ -330,7 +330,10 @@ WHERE `peso_kg` < 2 OR `peso_kg` < 3;
 32. Selecione o `numero`, `nome`, `tipo1` e `tipo2` dos pokémons com tipo primário `Normal`, que não possuem tipo secundário. Existe algum pokémon lendário nos resultados, se sim, os remova dos resultados?
 
 ```sql
+USE pokedex; 
 
+SELECT `numero`, `nome`, `tipo1`, `tipo2` FROM `Pokemon`
+WHERE `tipo1` = 'normal' AND `tipo2` IS NULL OR `lendario` IS NULL;
 ```
 
 33. Quem são os pokémons do tipo `Water` que não são azuis? Apresente `numero`, `nome`, `tipo1`, `tipo2` e `cor`, ordenados pelo `nome` de maneira crescente.

@@ -321,7 +321,10 @@ LIMIT 5;
 31. Selecione o `numero`, `nome`, `peso_kg` dos pokémons com peso entre 2kg e 3kgs?
 
 ```sql
+USE pokedex; 
 
+SELECT `numero`, `nome`, `peso_kg` FROM `Pokemon`
+WHERE `peso_kg` < 2 OR `peso_kg` < 3;
 ```
 
 32. Selecione o `numero`, `nome`, `tipo1` e `tipo2` dos pokémons com tipo primário `Normal`, que não possuem tipo secundário. Existe algum pokémon lendário nos resultados, se sim, os remova dos resultados?

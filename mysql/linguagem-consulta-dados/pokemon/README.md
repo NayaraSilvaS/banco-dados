@@ -246,7 +246,10 @@ WHERE `altura_m` > '2,10';
 24. Quais são as diferentes tipos de cores dos pokémons? Apresente os resultados de maneira crescente pelo nome da cor.
 
 ```sql
+USE pokedex; 
 
+SELECT DISTINCT `cor` FROM `Pokemon`
+ORDER BY `cor` ASC;
 ```
 
 25. Selecione o `nome` e `velocidade` dos pokémons com velocidade entre 30 e 70. Ordene os resultados por nome (crescente) e velocidade (decrescente)

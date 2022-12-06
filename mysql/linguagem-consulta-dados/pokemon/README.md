@@ -276,7 +276,10 @@ ORDER BY `total` DESC;
 27. Selecione os pokémons da primeira geração com taxa de captura igual a 255.
 
 ```sql
+USE pokedex; 
 
+SELECT `nome`, `tipo1`, `taxa_captura` FROM `Pokemon`
+WHERE `taxa_captura` = 255;
 ```
 
 

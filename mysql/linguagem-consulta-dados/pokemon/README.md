@@ -255,7 +255,11 @@ ORDER BY `cor` ASC;
 25. Selecione o `nome` e `velocidade` dos pokémons com velocidade entre 30 e 70. Ordene os resultados por nome (crescente) e velocidade (decrescente)
 
 ```sql
+USE pokedex; 
 
+SELECT `nome`, `velocidade` FROM `Pokemon`
+WHERE `velocidade` > 30 AND  `velocidade` < 70
+ORDER BY `nome` ASC, `velocidade` DESC;
 ```
 
 26. Quem são os pokémons lendários? Apresente os resultados ordenados por `total` decrescente.

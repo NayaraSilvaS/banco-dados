@@ -355,7 +355,10 @@ LIMIT 10;
 35. Selecione os pokémons cujo nome comece e termine com a letra `a`. 
 
 ```sql
+USE pokedex; 
 
+SELECT `nome` FROM `Pokemon`
+WHERE `nome` LIKE '%a' AND `nome` LIKE 'a%';
 ```
 
 36. Quem são os pokémons do tipo `Fire` que não são vermelhos? Apresente `numero`, `nome`, `tipo1`, `tipo2` e `cor`, ordenados pelo `nome` de maneira crescente.

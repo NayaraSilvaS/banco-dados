@@ -370,7 +370,10 @@ WHERE `nome` LIKE '%a' AND `nome` LIKE 'a%';
 37. Quais são os diferentes tipos de `peso_kg` dos pokémons? Apresente os resultados ordenados de maneira crescente.
 
 ```sql
+USE pokedex; 
 
+SELECT `nome`, `peso_kg` FROM `Pokemon`
+ORDER by `peso_kg` ASC;
 ```
 
 38. Selecione o `numero`, `nome` e `hp` dos pokémons com valores entre 0 e 100. Ordene os resultados de maneira crescente por `hp` e `nome`.

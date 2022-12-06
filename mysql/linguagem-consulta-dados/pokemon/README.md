@@ -379,7 +379,11 @@ ORDER by `peso_kg` ASC;
 38. Selecione o `numero`, `nome` e `hp` dos pokémons com valores entre 0 e 100. Ordene os resultados de maneira crescente por `hp` e `nome`.
 
 ```sql
+USE pokedex; 
 
+SELECT `numero`, `nome`, `hp` FROM `Pokemon`
+WHERE `hp` > 0 AND `hp` < 100
+ORDER by `nome` ASC, `hp` ASC;
 ```
 
 39. Selecione o `numero`, `nome`, `hp`, `ataque`, `defesa` e `total`; dos pokémons com valores de `hp`, `ataque`, `defesa` maiores ou iguais a 100.

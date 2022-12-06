@@ -463,8 +463,9 @@ SELECT DISTINCT COUNT(`nome`) FROM `Pokemon`;
 8. Quantos pokémons possuem tipo2?
 
 ```sql
+USE pokedex; 
 
-
+SELECT DISTINCT COUNT(`tipo2`) FROM `Pokemon`;
 ```
 
 9. Quantos são os diferentes tipos primários dos pokémons? 

@@ -414,8 +414,47 @@ WHERE `hp` >= 100 AND `ataque` >= 100 AND `defesa` >= 100;
     * taxa_captura
 
 ```sql
+USE pokedex; 
 
+SELECT
+	MAX(`total`) AS `total_max`, 
+	MIN(`total`) AS `total_min`
+FROM `Pokemon`;
 
+SELECT 
+	MAX(`hp`) AS `hp_max`, 
+	MIN(`hp`) AS `hp_min`
+FROM `Pokemon`;
+
+SELECT 
+	MAX(`ataque`) AS `ataque_max`, 
+	MIN(`ataque`) AS `ataque_min`
+FROM `Pokemon`;
+
+SELECT 
+	MAX(`defesa`) AS `defesa_max`, 
+	MIN(`defesa`) AS `defesa_min`
+FROM `Pokemon`;
+
+SELECT 
+	MAX(`ataque_especial`) AS `ataque_especial_max`, 
+	MIN(`ataque_especial`) AS `ataque_especial_min`
+FROM `Pokemon`;
+
+SELECT 
+	MAX(`defesa_especial`) AS `defesa_especial_max`, 
+	MIN(`defesa_especial`) AS `defesa_especial_min`
+FROM `Pokemon`;
+
+SELECT 
+	MAX(`velocidade`) AS `velocidade_max`, 
+	MIN(`velocidade`) AS `velocidade_min`
+FROM `Pokemon`;
+
+SELECT 
+	MAX(`taxa_captura`) AS `taxa_captura_max`, 
+	MIN(`taxa_captura`) AS `taxa_captura_min`
+FROM `Pokemon`;
 ```
 
 2. Quantas cores diferentes possuem os pokémons?

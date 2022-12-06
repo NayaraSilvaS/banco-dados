@@ -227,7 +227,11 @@ ORDER BY `nome` ASC;
 22. Qual é o maior valor de `ataque_especial` cadastrado?
 
 ```sql
+USE pokedex; 
 
+SELECT `numero`, `nome`, `ataque_especial` FROM `Pokemon`
+ORDER BY `ataque_especial` DESC
+LIMIT 1;
 ```
 
 23. Selecione o `numero`, `nome` e `altura_m` dos pokémons que possuem altura acima de 2,10m.

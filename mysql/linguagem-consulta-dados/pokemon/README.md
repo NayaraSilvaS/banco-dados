@@ -468,15 +468,17 @@ SELECT COUNT(DISTINCT `cor`) FROM `Pokemon`;
 3. Qual é o peso médio dos pokémons?
 
 ```sql
+USE pokedex; 
 
-
+SELECT AVG(`peso_kg`) FROM `Pokemon`;
 ```
 
 4. Qual é a soma das alturas dos pokémons?
 
 ```sql
+USE pokedex; 
 
-
+SELECT SUM(DISTINCT `altura_m`) FROM `Pokemon`;
 ```
 
 5. Quantos pokémons estão cadastrados no banco de dados?
@@ -490,13 +492,13 @@ SELECT DISTINCT COUNT(`nome`) FROM `Pokemon`;
 6. Qual é o altura média dos pokémons?
 
 ```sql
+USE pokedex; 
 
-
+SELECT AVG( DISTINCT `altura_m`) FROM `Pokemon`;
 ```
 
 7. Qual é o desvio padrão do valor de HP dos pokémons?
 ```sql
-
 
 ```
 
@@ -519,77 +521,123 @@ SELECT DISTINCT COUNT(`tipo1`) FROM `Pokemon`;
 10. Qual é a soma dos pesos dos pokémons?
 
 ```sql
+USE pokedex; 
 
-
+SELECT SUM(DISTINCT `peso_kg`) FROM `Pokemon`;
 ```
 
 11. Qual é a quantidade de Pokémons lendários e não lendários
 
 ```sql
+USE pokedex; 
 
+SELECT count(`lendario`) FROM `Pokemon`
+WHERE `lendario` = 1;
 
+SELECT count(`lendario`) FROM `Pokemon`
+WHERE `lendario` = 0;
 ```
 
 12. Qual é a quantidade de pokémons para cada uma das diferentes cores ordenadas decrescente?
 
 ```sql
+USE pokedex; 
 
-
+SELECT DISTINCT `cor`, COUNT(`cor`) AS `quantidade` FROM `Pokemon`
+GROUP BY `cor`
+ORDER BY `quantidade` DESC;
 ```
 
 13. Qual é a média de peso e altura de cada um dos tipos primários dos pokémons? Ordene os resultados decrescente respectivamente por média de peso e altura.
 ```sql
+USE pokedex; 
 
-
+SELECT DISTINCT `tipo1`, AVG(`peso_kg`) AS `peso`, AVG(`altura_m`) AS `altura` FROM `Pokemon`
+GROUP BY `tipo1`
+ORDER BY `peso` DESC, `altura` DESC;
 ```
 
 14. Qual é a taxa de captura média por cor de cada um dos pokémons lendários?
 
 ```sql
+USE pokedex; 
 
-
+SELECT `cor`, AVG(`taxa_captura`) AS `taxa_captura`
+FROM `Pokemon`
+WHERE `lendario` = 1
+GROUP BY `cor`;
 ```
 
 15. Qual os tipos primários que possuem a taxa de captura média acima de 100
 
 ```sql
+USE pokedex; 
 
-
+SELECT `tipo1`, `taxa_captura` FROM `Pokemon`
+WHERE `taxa_captura` > 100;
 ```
 
 16. Agrupados por cor, quais pokémons não lendários possuem média total abaixo de 400
 
 ```sql
+USE pokedex; 
 
-
+SELECT `cor`, AVG(`total` < 400) AS `total`
+FROM `Pokemon`
+WHERE `lendario` = 0
+GROUP BY `cor`;
 ```
 
 17. Qual o valor máximo total em cada uma das gerações?
 
 ```sql
+USE pokedex; 
+
+SELECT `tipo1`, MAX(`total`) AS `total`
+FROM `Pokemon`
+GROUP BY `tipo1`;
 
 
+SELECT `tipo2`, MAX(`total`) AS `total`
+FROM `Pokemon`
+GROUP BY `tipo2`;
 ```
 
 18. Quantos pokémons lendários existem em cada uma das gerações?
 
 ```sql
+USE pokedex; 
+
+SELECT count(`tipo1`) AS `tipo1`
+FROM `Pokemon`
+WHERE `lendario` = 1;
 
 
+SELECT count(`tipo2`) AS `tipo2`
+FROM `Pokemon`
+WHERE `lendario` = 1;
 ```
 
 19. Em cada uma das gerações, quantos pokémons tem tipos primários e secundários e qual a taxa_captura média deles?
 
 ```sql
 
-
 ```
 
 20. Qual é a quantidade de cores de cada um dos pokémons lendários em todas as gerações?
 
 ```sql
+USE pokedex; 
 
+SELECT DISTINCT `tipo1`, COUNT(`cor`) AS `cor` FROM `Pokemon`
+WHERE `lendario` = 1
+GROUP BY `tipo1`
+ORDER BY `cor` DESC;
 
+SELECT DISTINCT `tipo2`, COUNT(`cor`) AS `cor` FROM `Pokemon`
+WHERE `lendario` = 1
+GROUP BY `tipo2`
+ORDER BY `cor` DESC;
 ```
 
 

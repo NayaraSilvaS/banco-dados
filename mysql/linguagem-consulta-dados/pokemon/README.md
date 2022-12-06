@@ -389,7 +389,10 @@ ORDER by `nome` ASC, `hp` ASC;
 39. Selecione o `numero`, `nome`, `hp`, `ataque`, `defesa` e `total`; dos pokémons com valores de `hp`, `ataque`, `defesa` maiores ou iguais a 100.
 
 ```sql
+USE pokedex; 
 
+SELECT `numero`, `nome`, `hp`, `ataque`, `defesa`, `total` FROM `Pokemon`
+WHERE `hp` >= 100 AND `ataque` >= 100 AND `defesa` >= 100;
 ```
 
 40. Selecione todos os pokémons do tipos `Water` e `Gelo`, ordenados decrescente por `total`.

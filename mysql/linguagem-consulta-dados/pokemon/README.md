@@ -265,7 +265,11 @@ ORDER BY `nome` ASC, `velocidade` DESC;
 26. Quem são os pokémons lendários? Apresente os resultados ordenados por `total` decrescente.
 
 ```sql
+USE pokedex; 
 
+SELECT `nome`, `lendario`, `total` FROM `Pokemon`
+WHERE `lendario`
+ORDER BY `total` DESC;
 ```
 
 

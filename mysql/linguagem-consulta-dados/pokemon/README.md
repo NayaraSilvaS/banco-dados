@@ -518,7 +518,9 @@ SELECT AVG( DISTINCT `altura_m`) FROM `Pokemon`;
 
 7. Qual é o desvio padrão do valor de HP dos pokémons?
 ```sql
+USE pokedex;
 
+SELECT STD(`hp`) FROM `Pokemon`;
 ```
 
 8. Quantos pokémons possuem tipo2?

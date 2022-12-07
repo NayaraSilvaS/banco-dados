@@ -86,8 +86,8 @@ WHERE `geracao` = 1;
 ```sql
 USE pokedex; 
 
-SELECT `cor`, `geracao` FROM `Pokemon`
-WHERE `cor` = 'amarelo'AND `geracao` = 1;
+SELECT `nome`, `cor`, `geracao` FROM `Pokemon`
+WHERE `cor` = 'amarelo' AND `geracao` = 1;
 ```
 
 7. Qual é o pokémon mais forte?
@@ -95,7 +95,7 @@ WHERE `cor` = 'amarelo'AND `geracao` = 1;
 ```sql
 USE pokedex; 
 
-SELECT `numero`, `nome`, `total` FROM `Pokemon`
+SELECT `nome`, `total` FROM `Pokemon`
 ORDER BY `total` DESC
 LIMIT 1;
 ```
@@ -116,7 +116,7 @@ WHERE `tipo1` = 'Fire';
 USE pokedex; 
 
 SELECT `numero`, `nome`, `defesa` FROM `Pokemon`
-ORDER BY `defesa` DESC;
+ORDER BY `nome` DESC, `defesa` DESC;
 ```
 
 
@@ -642,7 +642,10 @@ WHERE `lendario` = 1;
 19. Em cada uma das gerações, quantos pokémons tem tipos primários e secundários e qual a taxa_captura média deles?
 
 ```sql
+USE pokedex; 
 
+SELECT `tipo1`, `tipo2`, COUNT(`geracao`), AVG(`taxa_captura`) FROM `Pokemon`
+GROUP BY `tipo1`, `tipo2`;
 ```
 
 20. Qual é a quantidade de cores de cada um dos pokémons lendários em todas as gerações?

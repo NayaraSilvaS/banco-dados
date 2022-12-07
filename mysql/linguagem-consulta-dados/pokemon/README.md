@@ -49,7 +49,7 @@ Para este projeto, sua tarefa é criar consultas (queries), usando as técnicas 
 1. Selecione o banco de dados (esquema) `pokédex`.
 
 ```sql
-
+USE pokedex;
 ```
 
 2. Obtenha informações da estrutura da tabela `Pokémon`.
@@ -61,7 +61,7 @@ Para este projeto, sua tarefa é criar consultas (queries), usando as técnicas 
 3. Selecione todos os pokémons cadastrados no banco de dados.
 
 ```sql
-
+SELECT * FROM `Pokemon`
 ```
 
 4. Selecione o `numero`, `nome`, `cor`, `altura_m` e `peso_kg` de todos os pokémons cadastrados.

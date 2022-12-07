@@ -211,7 +211,12 @@ ORDER BY `total` DESC;
 20. Selecione todos os pokémons do tipo `Planta` e `Venenoso` que não sejam `Green`, ordenado crescente pelo `nome`.
 
 ```sql
+USE pokedex;
 
+SELECT `nome`, `tipo1`, `tipo2`, `cor` FROM `Pokemon`
+WHERE `cor` != 'green' AND (
+  `tipo1` IN('Planta', 'Venenoso') OR `tipo2` IN('Planta', 'Venenoso'))
+ORDER BY `nome` ASC ;
 ```
 
 21. Selecione de maneira crescente os nomes dos pokémons que possuem a letra y na 4ª posição do nome.

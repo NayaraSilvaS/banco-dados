@@ -369,7 +369,12 @@ WHERE `nome` LIKE '%a' AND `nome` LIKE 'a%';
 36. Quem são os pokémons do tipo `Fire` que não são vermelhos? Apresente `numero`, `nome`, `tipo1`, `tipo2` e `cor`, ordenados pelo `nome` de maneira crescente.
 
 ```sql
+USE pokedex;
 
+SELECT `numero`, `nome`, `tipo1`, `tipo2`, `cor` FROM `Pokemon`
+WHERE `cor` != 'Blue' AND (
+  `tipo1` IN('Water') OR `tipo2` IN('Water'))
+ORDER BY `nome` ASC ;
 ```
 
 37. Quais são os diferentes tipos de `peso_kg` dos pokémons? Apresente os resultados ordenados de maneira crescente.

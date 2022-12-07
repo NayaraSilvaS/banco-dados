@@ -413,7 +413,11 @@ WHERE `hp` >= 100 AND `ataque` >= 100 AND `defesa` >= 100;
 40. Selecione todos os pokémons do tipos `Water` e `Gelo`, ordenados decrescente por `total`.
 
 ```sql
+USE pokedex;
 
+SELECT `nome`, `tipo1`, `tipo2` FROM `Pokemon`
+WHERE `tipo1` IN('Water', 'Gelo') OR `tipo2` IN('Water', 'Gelo')
+ORDER BY `total` DESC;
 ```
 
 ## 2. Exercícios de Funções Agregadas
